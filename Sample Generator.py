@@ -15,7 +15,7 @@ while True:
     for (x,y,w,h) in faces:
         cv2.rectangle(img, (x,y), (x+w,y+h), (255,0,0), 2) 
         count += 1
-        cv2.imwrite("samples/faces."+str(face_id)+"."+str(count)+".jpg",  )
+        cv2.imwrite("samples/faces."+str(face_id)+"."+str(count)+".jpg",img)
         cv2.imshow('image', img)
     k = cv2.waitKey(100) & 0xff
     if k == 27:

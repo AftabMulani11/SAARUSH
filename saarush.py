@@ -16,7 +16,7 @@ engine.setProperty('voice', voices[1].id)
 app_id= "VGW9JT-JLWUT6EXPJ"
 client = wolframalpha.Client(app_id)
 
-emaildata = pd.read_csv("M:\\SAARUSH 2.0\\Email_ID.csv")
+emaildata = pd.read_csv(".\Email_ID.csv")
 
 def wakeup():
     while True:
@@ -126,7 +126,7 @@ def taskexec():
             exit()
             
         elif 'take me to' in query:
-            query = query.replace("open", "")
+            query = query.replace("take me to", "")
             query = query.replace(" ", "")
             print("ok")
             speak('ok')
